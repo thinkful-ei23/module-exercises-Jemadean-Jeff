@@ -5,7 +5,6 @@
 'use strict';
 
 $(document).ready(function() {
-  shoppingList.bindEventListeners();
   const itemNames = [ '', 'apples', 'pears' ];
   itemNames.forEach(name => {
     try {
@@ -15,6 +14,7 @@ $(document).ready(function() {
       console.log('Cannot add item: ' + error.message);
     }
   });
+  shoppingList.bindEventListeners();
   shoppingList.render();
 });
 
