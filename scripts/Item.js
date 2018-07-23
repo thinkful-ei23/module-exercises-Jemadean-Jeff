@@ -11,9 +11,12 @@ const validateName = (function(name) {
 });
 
 const create = function(name) {
-  id: cuid(),
-  name: 'name',
-  checked: false
-};
+  return {
+    id: cuid(),
+    name: 'name',
+    checked: false
+  };
+  validateName(name), create(name);
+}
 
 
