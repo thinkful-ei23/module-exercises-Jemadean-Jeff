@@ -14,7 +14,12 @@ const create = function(name) {
   return {
     id: cuid(),
     name: 'name',
-    checked: false
+    checked: false,
+    validateName: (function(name) {
+      if (typeOf Item.name !== 'string') {
+        console.error('Name does not exist');
+      }
+    }),
   };
   validateName(name), create(name);
 }
